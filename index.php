@@ -60,7 +60,7 @@ $recordhomeproducts = mysqli_query($conn,$sqlhomeproducts);
             <a href="productsdetail.php?id=<?php echo $productid ?>"><h5 class="card-title">
             	<center><?php echo $rowhomeproducts['name'] ; ?></center></h5></a>
             	<hr>
-            <p>Rs <?php echo $rowhomeproducts['discount'] ; ?><span style="float:right;"><s>Rs <?php echo $rowhomeproducts['price'] ; ?></s></span></p>
+            <p><!-- Rs <?php echo $rowhomeproducts['discount'] ; ?> --><span style="float:right;"><s>Rs <?php echo $rowhomeproducts['price'] ; ?></s></span></p>
             
             <p>Product From <?php echo $rowhomeproducts['storename'] ; ?></p>
           </div>

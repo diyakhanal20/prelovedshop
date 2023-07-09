@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Ecommerce</title>
+    <title>PreLoved Shop</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
@@ -15,7 +15,7 @@ $sqlcategory = "SELECT * FROM category ";
 $recordcategory = mysqli_query($conn,$sqlcategory);
 $id=$_GET['id'];
 $buyerid=$_GET['buyerid'];
-$buyernumber=$_GET['buyernumber'];
+$buyeremail=$_GET['buyeremail'];
 $sqlproducts = "SELECT * FROM products WHERE id='$id'";
 $recordproducts = mysqli_query($conn,$sqlproducts);
 $sqlstore = "SELECT * FROM users ";
@@ -53,7 +53,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
       $user=$rowproducts['userid'];
       $storename=$rowproducts['storename'];
       //$amount=$rowproducts['discount'];
-      mysqli_query($conn,"INSERT INTO checkout (productid,userid,buyerid,buyernumber,location,ddate,storename) VALUES ('$orderid','$user','$buyerid','$buyernumber','$location','$date','$storename')")
+      mysqli_query($conn,"INSERT INTO checkout (productid,userid,buyerid,buyeremail,location,ddate,storename) VALUES ('$orderid','$user','$buyerid','$buyeremail','$location','$date','$storename')")
     ?>
             <div class="col-lg-6">
                 <img class="card-img-top" src="<?php echo $rowproducts['location'] ; ?>"><br><br>
@@ -112,28 +112,20 @@ $recordstore = mysqli_query($conn,$sqlstore);
                 </form>
                 <br>
                 <h1> OR, Pay Online</h1>
-                <form action="esewa.php" method="POST">
+                <form action="khalti.php" method="POST">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Select Quantity</label>
                         <select name="qty" class="form-control" id="exampleFormControlSelect1">
                             <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
                         </select>
                     </div>
                     <!-- <input type="hidden" name="amount" value="<?php  echo $rowproducts['discount'];?>" required>
                     <input type="hidden" name="userid" value="<?php  echo $rowproducts['userid'];?>" required> -->
                     <input type="hidden" name="orderid" value="<?php  echo $orderid;?>" required>
-                    <button type="submit" class="btn btn-md btn-success">Pay with Esewa</button>
                 </form>
+
                 <button id="payment-button" class="btn btn-primary mt-3 submit">Pay with Khalti</button>
+
                 <!-- Place this where you need payment button -->
                 <!-- Paste this code anywhere in you body tag -->
                 <script>
@@ -152,6 +144,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
                     ],
                     "eventHandler": {
                         onSuccess(payload) {
+                            console.log(payload);
                             $.ajax({
                                 url: './verification.php',
                                 type: 'post',
@@ -159,6 +152,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
                                     amount: payload.amount,
                                     trans_token: payload.token,
                                     item_id: payload.id
+
 
                                 },
                                 success: function(response) {
@@ -171,7 +165,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
                                         autoHideDelay: 1500,
                                     }).then(
                                         <?php
-                                           mysqli_query($conn,"INSERT INTO checkout (productid,userid,buyerid,buyernumber,location,ddate,storename) VALUES ('$orderid','$user','$buyerid','$buyernumber','$location','$date','$storename')");
+                                           mysqli_query($conn,"INSERT INTO checkout (productid,userid,buyerid,buyeremail,location,ddate,storename) VALUES ('$orderid','$user','$buyerid','$buyeremail','$location','$date','$storename')");
                                            $sql ="DELETE FROM cart WHERE buyerid='$buyerid' AND productid='$productid' ";
                                            $sqlchange = mysqli_query($conn,$sql); 
                                         ?>

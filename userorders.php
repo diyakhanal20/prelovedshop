@@ -75,10 +75,10 @@ $recordproducts = mysqli_query($conn,$sqlproducts);
                 <a class="nav-link" href="userpassword.php">
                     <span>Change Password</span></a>
             </li>
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
                 <a class="nav-link" href="esewaintegration.php">
                     <span>Esewa Integration</span></a>
-            </li>
+            </li> -->
             <li class="nav-item active">
                 <a class="nav-link" href="logoutuser.php?lid=<?php echo $row['id'];?>">
                     <span>logout</span></a>

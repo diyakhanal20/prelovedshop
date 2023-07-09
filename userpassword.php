@@ -74,10 +74,6 @@ $row = mysqli_fetch_array($record);
                     <span>Change Password</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="esewaintegration.php">
-                    <span>Esewa Integration</span></a>
-            </li>
-            <li class="nav-item active">
                 <a class="nav-link" href="logoutuser.php?lid=<?php echo $row['id'];?>">
                     <span>logout</span></a>
             </li>

@@ -79,7 +79,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
             <div class="welcome__description">
                 <h1 class="description__heading">Welcome</h1>
                 <h2 class="login-regestration__heading">Don't have an Account?</h2>
-                <a class="Login-reg__login" href="register.php" id="reg">Register</a>
+                <a class="Login-reg__login" href="registermerchant.php" id="reg">Register</a>
             </div>
         </div>
         <div class="right__section__login col-lg-4 my-auto" id="right">
@@ -99,7 +99,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
 
                     </div>
                 </div>
-                 <form method="POST" action="buyerlogin.php">
+                <form method="POST" action="userlogin.php">
                 <div class="row px-3"> <label class="mb-1">
                         <h6 class="mb-0 text-sm">Email Address</h6>
                     </label> <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address" required>
@@ -115,7 +115,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
 
                 <div class="row mb-3 px-3"> <button type="submit" class="btn btn-blue text-center" name="login">Login</button> </div>
                 <div class="row mb-4 px-3">
-                    <small class="font-weight-bold">Don't have an account? <a class="text-danger " href="register.php">Register</a>
+                    <small class="font-weight-bold">Don't have an account? <a class="text-danger " href="registermerchant.php">Register</a>
                     </small>
                 </div>
               

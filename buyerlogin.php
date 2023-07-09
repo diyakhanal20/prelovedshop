@@ -3,16 +3,17 @@
   if(isset($_POST['login'])){
     include'config.php';
 
-    $uid = $_POST['phonenumber'];
-    $pwd = $_POST['password'];    
-
+    $uemail = $_POST['email'];
+    $pwd = $_POST['password'];  
+    $_SESSION['useremail']=$uemail;  
+  
     //error handlers
 
-    if(empty($uid) || empty($pwd)){
+    if(empty($uemail) || empty($pwd)){
       header("location:login.php?alert=empty");
       exit();
     }else{
-      $sql = "SELECT * FROM buyer WHERE phonenumber='$uid' ";
+      $sql = "SELECT * FROM buyer WHERE email='$uemail' ";
       $result = mysqli_query($conn,$sql);
       $resultCheck = mysqli_num_rows($result);
       if($resultCheck < 1) {

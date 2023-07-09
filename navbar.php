@@ -16,7 +16,7 @@
   }
 </style>
 <!--navbar-->
-	<nav class="navbar navbar-expand-lg navbar-custom">
+  <nav class="navbar navbar-expand-lg navbar-custom">
   <a class="navbar-brand" href="index.php">PreLoved Shop</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"><p>Menu</p></span>
@@ -35,8 +35,8 @@
           Categories
         </a>
         <div class="dropdown-menu">
-        	<?php while($rowcategory=mysqli_fetch_array($recordcategory)){
-        		$categoryname=$rowcategory['category'];
+          <?php while($rowcategory=mysqli_fetch_array($recordcategory)){
+            $categoryname=$rowcategory['category'];
             ?>
           <a class="dropdown-item" href="indexcategory.php?id=<?php echo $categoryname ?>"><?php echo $rowcategory['category'] ; ?></a><?php }?>
           
@@ -59,16 +59,17 @@
       <?php if(!isset($_SESSION['buyerid'])){
     ?> 
 
-      <li class="nav-item">
-        <a class="nav-link" href="login.php">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="signup.php">Signup</a>
-      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Login
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="login.php" > Login as User</a>
+          <a class="dropdown-item" href="loginmerchant.php" > Login as Merchant</a>
     <?php } ?>
       <?php 
       if(isset($_SESSION['buyerid'])){
-		?>
+    ?>
       <li class="nav-item">
         <a class="nav-link" href="account.php">Account</a>
 
@@ -76,14 +77,14 @@
       <li class="nav-item">
         <a class="nav-link" href="cart.php">Cart</a>
       </li>
-      	<li class="nav-item">
+        <li class="nav-item">
         <a class="nav-link" href="logoutbuyer.php">Logout</a>
       </li>
-  	 <?php }
-  	 else {
-  	 	
-  	 }
-  	 	?>
+     <?php }
+     else {
+      
+     }
+      ?>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
       <input  name ="search" class="form-control mr-sm-2" type="search" placeholder="Search Products">

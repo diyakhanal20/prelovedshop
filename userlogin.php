@@ -3,27 +3,27 @@
   if(isset($_POST['login'])){
     include'config.php';
 
-    $uid = $_POST['phonenumber'];
+    $uemail = $_POST['email'];
     $pwd = $_POST['password'];    
 
     //error handlers
 
-    if(empty($uid) || empty($pwd)){
-      header("location:login.php?alert=empty");
+    if(empty($uemail) || empty($pwd)){
+      header("location:loginmerchant.php?alert=empty");
       exit();
     }else{
-      $sql = "SELECT * FROM users WHERE phonenumber='$uid' ";
+      $sql = "SELECT * FROM users WHERE email='$uemail' ";
       $result = mysqli_query($conn,$sql);
       $resultCheck = mysqli_num_rows($result);
       if($resultCheck < 1) {
-        header("Location: login.php?alert=nosuchuser");
+        header("Location: loginmerchant.php?alert=nosuchuser");
         exit();
       }else {
         if ($row = mysqli_fetch_assoc($result)){
           //dehashing password
           $hashedPwdCheck = password_verify($pwd, $row['password']);
           if($hashedPwdCheck == false){
-            header("Location: login.php?alert=password_error");
+            header("Location: loginmerchant.php?alert=password_error");
             exit();
           }elseif($hashedPwdCheck == true){
 
@@ -38,7 +38,7 @@
       }
     }
   }else{
-    header("Location: login.php?alert=login_error");
+    header("Location: loginmerchant.php?alert=login_error");
     exit();
   }
 

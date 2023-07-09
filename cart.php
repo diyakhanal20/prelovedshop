@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ecommerce</title>
+  <title>PreLoved Shop</title>
 </head>
 <?php 
 session_start();
@@ -105,7 +105,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
       $productid=$rowproducts['productid'];
       $user=$rowproducts['userid'];
       $buyerid=$row['id'];
-      $buyernumber=$row['phonenumber'];
+      $buyeremail=$row['email'];
     ?>
     
   
@@ -134,7 +134,7 @@ $recordstore = mysqli_query($conn,$sqlstore);
 </td>
 <td>
                                        
-      <a href="checkout.php?id=<?php echo $productid;?>&user=<?php echo $productid;?>&buyerid=<?php echo $buyerid;?>&buyernumber=<?php echo $buyernumber;?>" class="btn btn-primary">Checkout</a>
+      <a href="checkout.php?id=<?php echo $productid;?>&user=<?php echo $productid;?>&buyerid=<?php echo $buyerid;?>&buyeremail=<?php echo $buyeremail;?>" class="btn btn-primary">Checkout</a>
 </td>
 <td>
                                        

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ecommerce</title>
+	<title>PreLoved Shop</title>
 </head>
 <?php
 session_start(); 

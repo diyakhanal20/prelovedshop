@@ -85,10 +85,7 @@ $recordproducts = mysqli_query($conn,$sqlproducts);
                 <a class="nav-link" href="userpassword.php">
                     <span>Change Password</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="esewaintegration.php">
-                    <span>Esewa Integration</span></a>
-            </li>
+            
             <li class="nav-item active">
                 <a class="nav-link" href="logoutuser.php?lid=<?php echo $row['id'];?>">
                     <span>logout</span></a>
@@ -273,6 +270,22 @@ $recordproducts = mysqli_query($conn,$sqlproducts);
             .catch( error => {
                 console.error( error );
             } );
+            </script>
+            <script type="text/javascript" >
+    function matchpass(){
+      var actualprice=document.getElementById('price').value;
+      var discountprice=document.getElementById('discount').value; 
+  
+if(actualprice>discountprice){  
+return true;  
+}  
+else{  
+alert("discounted price should always be less than actualprice");  
+return false;  
+}  
+ }
+
+
     </script>
 
     <!-- Bootstrap core JavaScript-->
