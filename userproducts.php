@@ -164,11 +164,11 @@ $recordproducts = mysqli_query($conn,$sqlproducts);
                                       </div>
                                       <div class="form-group">
                                         <label for="exampleInputEmail1">Actual Price</label>
-                                        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="price" required>
+                                        <input type="number" min="0" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="price" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"  required>
                                       </div>
                                       <div class="form-group">
                                         <label for="exampleInputEmail1">Discount Price</label>
-                                        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="discount" required>
+                                        <input type="number" min="0"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="discount" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"   required>
                                       </div>
                                       <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Description</label>
@@ -270,23 +270,17 @@ $recordproducts = mysqli_query($conn,$sqlproducts);
             .catch( error => {
                 console.error( error );
             } );
-            </script>
-            <script type="text/javascript" >
-    function matchpass(){
-      var actualprice=document.getElementById('price').value;
-      var discountprice=document.getElementById('discount').value; 
-  
-if(actualprice>discountprice){  
-return true;  
-}  
-else{  
-alert("discounted price should always be less than actualprice");  
-return false;  
-}  
- }
+        
+        // document.getElementsByName("price").addEventListener("input", ()=>{
+        //     value =event.target.value;
+        //     console.log(value);
+        // });
+        
 
 
+        
     </script>
+    
 
     <!-- Bootstrap core JavaScript-->
     <script src="admin/vendor/jquery/jquery.min.js"></script>
