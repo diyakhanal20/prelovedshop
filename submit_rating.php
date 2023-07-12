@@ -1,5 +1,5 @@
 <?php
-$connect = new PDO("mysql:host=localhost;dbname=ecom", "root", "");
+$connect = new PDO("mysql:host=localhost;dbname=ecoom", "root", "");
 session_start();
 
 if (isset($_SESSION['buyerid'])) {
