@@ -42,6 +42,13 @@
 <body>
   <?php
   session_start();
+  
+
+// Display the output array
+if (!isset($_SERVER['MY_GLOBAL_VARIABLE'])) {
+  // Set the default value for the global variable
+  $_SERVER['MY_GLOBAL_VARIABLE'] = 'default value';
+}
   include 'config.php';
   $sqlcategory = "SELECT * FROM category ";
   $recordcategory = mysqli_query($conn, $sqlcategory);
@@ -49,7 +56,9 @@
   $id = $_GET['id'];
   $productid = $id;
   $sqlproducts = "SELECT * FROM products WHERE id='$id'";
+
   $recordproducts = mysqli_query($conn, $sqlproducts);
+ 
 
   $sqlstore = "SELECT * FROM users ";
   $recordstore = mysqli_query($conn, $sqlstore);
@@ -66,6 +75,17 @@
         $productname = $rowproducts['name'];
         $productcategory = $rowproducts['category'];
         $price = $rowproducts['price'];
+  $pythonScript = 'test.py';
+  $inputString = $rowproducts['name'];
+  $command = 'python ' . $pythonScript . ' "' . $inputString . '"';
+  $output = shell_exec($command);
+
+// Convert the output string to an array using a specific delimiter
+$delimiter = ','; // Replace with the delimiter used in the Python script
+$globaloutputArray = explode($delimiter, trim($output));
+$_SERVER['MY_GLOBAL_VARIABLE'] = $globaloutputArray;
+
+
         ?>
         <div class="col-lg-6">
           <img class="card-img-top" src="<?php echo $rowproducts['location']; ?>">
@@ -241,48 +261,70 @@
       </div>
     </div>
   </section>
-  <!-- div class="container">
+  <div class="container">
     <h3>
       <center>Recommended</center>
     </h3>
     <hr>
-    <div class="row">
-      <?php
+    <div class="container">
+  <div class="row">
+    
+  <?php foreach ($_SERVER['MY_GLOBAL_VARIABLE'] as $element) {
+    if (empty($element)) {
+      // This is the last iteration, so skip it
+      continue;
+    }
+   
+    $trimmedString = trim($element);
 
-      $sqlproductssearch = "SELECT * FROM products where name LIKE '%$productname%' or category LIKE '%$productcategory%' or price LIKE '%$price%'";
-      $recordproductssearch = mysqli_query($conn, $sqlproductssearch);
-      while ($rowproductssearch = mysqli_fetch_array($recordproductssearch)) {
-        $productidsearch = $rowproductssearch['id'];
-        ?>
-        <div class="col-lg-4">
-          <div class="card">
-            <img class="card-img-top" src="<?php echo $rowproductssearch['location']; ?>">
-            <div class="card-body">
-              <a href="productsdetail.php?id=<?php echo $productidsearch ?>">
-                <h5 class="card-title">
-                  <center>
-                    <?php echo $rowproductssearch['name']; ?>
-                  </center>
-                </h5>
-              </a>
-              <hr>
-              <p>Rs
-                <?php echo $rowproductssearch['discount']; ?><span style="float:right;"><s>Rs
-                    <?php echo $rowproductssearch['price']; ?>
-                  </s></span>
-              </p>
+    
+    $sqlproductes = "SELECT * FROM products where name LIKE '%$trimmedString%' ";
+   
+    
+    $recordproductes = mysqli_query($conn, $sqlproductes);
 
-              <p>Product From
-                <?php echo $rowproductssearch['storename']; ?>
-              </p>
-            </div>
-          </div>
-          <br>
+  // Execute the query
+$result = $conn->query($sqlproductes);
+
+// Check if any results were returned
+if ($result->num_rows > 0) {
+  
+    // Output data for each row
+    while ($row = $result->fetch_assoc()) {
+      $productid=$row['id'];
+      ?>
+      <div class="col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="<?php echo $row['location'] ; ?>">
+        <div class="card-body">
+          <a href="productsdetail.php?id=<?php echo $productid ?>"><h5 class="card-title">
+            <center><?php echo $row['name'] ; ?></center></h5></a>
+            <hr>
+          <p><!-- Rs <?php echo $row['discount'] ; ?> --><span style="float:right;"><s>Rs <?php echo $row['price'] ; ?></s></span></p>
+          
+          <p>Product From <?php echo $row['storename'] ; ?></p>
         </div>
-        <br><br>
-      <?php } ?>
-    </div>
-    </div> -->
+      </div>
+      <br>
+  </div>
+  <br><br>
+<?php
+        // Add more fields as needed
+        break;
+    }
+} else {
+    echo "No products found.";
+}
+
+// Close the database connection
+
+
+
+
+} ?>
+  
+</div>
+    </div> 
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

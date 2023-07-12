@@ -19,6 +19,8 @@
 <body>
 <?php 
 session_start();
+
+
 include'config.php';
 $sqlcategory = "SELECT * FROM category ";
 $recordcategory = mysqli_query($conn,$sqlcategory);
