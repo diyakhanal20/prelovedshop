@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Super Admin</title>
+	<title>Admin</title>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4 center">
-			<h4><center>Super Admin Login Page</center></h4>
+			<h4><center>Admin Login Page</center></h4>
 			<br>
 			<form method="POST" action="superadminlogin.php">
   <div class="form-group">

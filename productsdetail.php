@@ -75,7 +75,7 @@ if (!isset($_SERVER['MY_GLOBAL_VARIABLE'])) {
         $productname = $rowproducts['name'];
         $productcategory = $rowproducts['category'];
         $price = $rowproducts['price'];
-  $pythonScript = 'test.py';
+  $pythonScript = 'test.py'; # recommendation
   $inputString = $rowproducts['name'];
   $command = 'python ' . $pythonScript . ' "' . $inputString . '"';
   $output = shell_exec($command);

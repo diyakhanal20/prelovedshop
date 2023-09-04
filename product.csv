@@ -1,20 +1,41 @@
 id,name,Location,category,discount,price,description,user_id,store_name
-1,Zara Tshirt,1685944228tshirt.jpg,Clothing,400,500,"Gray Tshirt is a oversized tshirt with cotton fabric , V neckline , short sleeve and have printed graphics.",1,SHOPPE
-2,Pink Jacket,1686063955pink jacket.jpg,Clothing,900,1000,Pink windchiter is a water resistance having nylon Fabric.,1,SHOPPE
-3,Red Jacket,1686289292redjacket.jpg,Clothing,800,900,"Red windchiter is a wind resistnace having poyster fabric ",2,Hilltop
-4,Nike Tshirt,1686289464bluetshirt.jpg,Clothing,400,500,"Blue Tshirt is a slim fit with cotton fabric, round neckline, short sleeve and have printed logo",2,SHOPPE
-5,Tshirt,1686289588lightbluetshirt.jpg,Clothing,20000,22000,"LightBlue Tshirt is a oversized with cotton fabric, round neckline, short sleeve and have printed prints",2,SHOPPE
-6,Samsung M33,1686290309353026888_6462093350519968_625101386167337975_n.jpg,Mobile,18000,20000,"Samsung Phone having storage 128 gb, battery of LiPo 5000 mAh, model m33 with camera of 8 px having os android.",3,Precious
-7,Samsung M31,1686290984345444639_232329876176935_5391371312302098325_n.jpg,Mobile,23000,24000,"Samsung Phone having storage 64 gb, battery of LiPo 4000 mAh, model m31 with camera of 8 px having os android. ",4,Precious
-8,One Plus,1686290855350771950_575032444819416_162473507376940563_n.jpg,Mobile,10000,10500,"OnePlus Phone having storage 128 gb, battery of LiPo 5000 mAh, model 12 Pro with camera of 8 px having os android.",5,Mountain
-9,Iphone 13,1686291185351732898_995913815103016_5582525234912445007_n.jpg,Mobile,90000,90500,"Apple Phone having storage 512 gb, battery of LiPo 5000 mAh, model 13 pro max with camera of 12 px having os android.",5,Mountain
-10,Mouse,1682941405mouse.jpg,Electronics,1000,1100,Wired Mouse which is electronic device with 2400 hz frequency having no multi lights,3,Glam
-11,Black Keyboard,1685013878keybd.png,Electronics,1500,1600,Slim Keyboard with high quality anf applicable to all os.,4,Glam
-12,Keyboard,1682944585keyboard.png,Electronics,1300,1400,Thick Keyboard with high quality anf applicable to all os.,6,Variety
-13,Laptop,asuz.jpg,Laptop,85000,86000,"ASUS Laptop with storage 256 gb, wifi connectivity, intel integrated graphic card ,touchpad, keyboard and having cpu core as dual core.",6,Variety
-14,MacBook,macbook.jpg,Laptop,120000,120000,"MacBook Laptop with storage 256 gb, wifi connectivity, nvidia graphic card ,touchpad, touchscreen, keyboard and having cpu core as dual core.",4,Hilltop
-15,PC Computer,1682942512computer.jpg,Electronics,50000,51000,"Electronics Desktop  with storage 120 gb, wired connectivity, intel integrated graphic card and having cpu core as dual core,wired mouse and keyboard",7,Glam
-16,Plain-Tshirt,plain.jpg,Clothing,800,1000,"Plain Tshirt is a oversized tshirt having nylon fabric , turtleneck , full sleeve and have printed logos.",8,Thread
-17,Asuzus Tshirt,asus.jpg,Clothing,600,1200,"Tshirt which is  slim fit with cotton fabric , round neckline , short sleeveless and have printed numbers.",9,Thread
-18,KTM CTY Tshirt,ktm.jpg,Clothing,900,950,"Gray Tshirt is a oversized tshirt with cotton fabric , round neckline , full sleeve and have printed logos.",8,Thread
-19,Polo shirt,polo.jpg,Clothing,750,900,"Tshirt is a oversized with cotton fabric , V neckline , short sleeve  with buttons and is polo tshirt.",10,Thread
+1,Zara Tshirt,zara.jpg,Clothing,400,500,"Gray Tshirt is a oversized tshirt with cotton fabric , V neckline , short sleeve and have printed graphics.",1,SHOPPE
+2,Pink Jacket,pink.jpg,Clothing,900,1000,Pink windchiter is a water resistance having nylon Fabric.,1,SHOPPE
+3,Red Jacket,red.jpg,Clothing,800,900,"Red windchiter is a wind resistnace having poyster fabric ",2,SHOPPE
+4,Nike Tshirt,blue.jpg,Clothing,400,500,"Blue Tshirt is a slim fit with cotton fabric, round neckline, short sleeve and have printed logo",2,SHOPPE
+5,Tshirt,lightblue.jpg,Clothing,2000,2200,"LightBlue Tshirt is a oversized with cotton fabric, round neckline, short sleeve and have printed prints",2,SHOPPE
+6,Samsung M33,m33.jpg,Mobile,18000,20000,"Samsung Phone having storage 128 gb, battery of LiPo 5000 mAh, model m33 with camera of 8 px having os android.",3,Variety
+7,Samsung M31,m31.jpg,Mobile,23000,24000,"Samsung Phone having storage 64 gb, battery of LiPo 4000 mAh, model m31 with camera of 8 px having os android. ",4,Variety
+8,One Plus,oneplus.jpg,Mobile,10000,10500,"OnePlus Phone having storage 128 gb, battery of LiPo 5000 mAh, model 12 Pro with camera of 8 px having os android.",5,Variety
+9,Iphone 13,iphone.jpg,Mobile,90000,90500,"Apple Phone having storage 512 gb, battery of LiPo 5000 mAh, model 13 pro max with camera of 12 px having os android.",5,Variety
+10,Mouse,mouse.jpg,Electronics,1000,1100,Wired Mouse which is electronic device with 2400 hz frequency having no multi lights,3,Variety
+11,Black Keyboard,keyboard.png,Electronics,1500,1600,Slim Keyboard with high quality anf applicable to all os.,4,Variety
+12,Keyboard,thickkey.png,Electronics,1300,1400,Thick Keyboard with high quality anf applicable to all os.,6,Variety
+13,Asus,asuz.jpg,Laptop,85000,86000,"ASUS Laptop with storage 256 gb, wifi connectivity, intel integrated graphic card ,touchpad, keyboard and having cpu core as dual core.",6,Variety
+14,MacBook,macbook.jpg,Laptop,120000,120000,"MacBook Laptop with storage 256 gb, wifi connectivity, nvidia graphic card ,touchpad, touchscreen, keyboard and having cpu core as dual core.",4,Variety
+15,PC Computer,computer.png,Electronics,50000,51000,"Electronics Desktop  with storage 120 gb, wired connectivity, intel integrated graphic card and having cpu core as dual core,wired mouse and keyboard",7,Glam
+16,Plain-Tshirt,plain.jpg,Clothing,800,1000,"Plain Tshirt is a oversized tshirt having nylon fabric , turtleneck , full sleeve and have printed logos.",8,SHOPPE
+17,Asuzus Tshirt,asus.jpg,Clothing,600,1200,"Tshirt which is  slim fit with cotton fabric , round neckline , short sleeveless and have printed numbers.",9,SHOPPE
+18,KTM CTY Tshirt,ktm.jpg,Clothing,900,950,"Gray Tshirt is a oversized tshirt with cotton fabric , round neckline , full sleeve and have printed logos.",8,SHOPPE
+19,Polo shirt,polo.jpg,Clothing,750,900,"Tshirt is a oversized with cotton fabric , V neckline , short sleeve  with buttons and is polo tshirt.",10,SHOPPE
+20,Sunban,sunban.jpg,Beauty Products,800,1100,Sunban Lotion can be used as sunscreen lotion which has SPF 20. It protects the skin from the harmful effects of ultraviolet radiations of the sun. Sunban Lotion has an UVA and UVB protection factor. Octyl Methoxycinnamate is a sun blocking agent that absorbs UV rays and helps in reducing scars.,11,Beauty
+21,Acnemoist,acnemoist.jpg,Beauty Products,150,300,Acnemoist is a specially formulated moisturiser that is oil-free. Acnemoist provides extensive moisturising for dry skin without making skin look oily. Acnemoist also offers sun protection.,12,Beauty
+22,bbcream,bbcream.jpg,Beauty Products,300,400,"This BB skin perfector adjusts to skin tone, blurs imperfections, and protects with broad-spectrum SPF 30. This replenishing water-gel formula leaves skin feeling fresh. Blurs imperfections. Brightens. Enhances. Hydrates. Evens skin tone. Smoothes. Zero oils and heavy ingredients. Protects with SPF 30.",13,Beauty
+23,casmara,casmara.jpg,Beauty Products,500,650,Moisturizing massage cream with hyaluronic acid and Optimize your massage movements while you give your skin some extra care.,11,Beauty
+24,deram moist,deram moist.jpg,Beauty Products,500,800,Dermamoist Lotion works by slowing down the processes that damage cells; forming a protective film and moisturizing the dry area and improving the blood circulation to the skin.,10,Beauty
+25,L.A girl,L.A. girl.jpg,Beauty Products,300,700,"Our Lift Off Instant Lash Lifting Definition Mascara coats lashes from root to tip with a precise applicator wand to add lifted volume leaving lashes looking full and plush. Instant lash lifting, smudge-proof formula gently washes off with warm water for easy removal.",12,Beauty
+26,neutrogen,neutrogen.jpg,Beauty Products,700,980,"Set your sights on the newest member of the Healthy Skin collection. This Radiant Setting Spray weightlessly locks makeup in place all day, so you don’t have to worry about smudges and smears. Infused with peptides, this finishing spray leaves skin looking bright and feeling refreshed.",13,Beauty
+27,powder,powder.jpg,Beauty Products,500,660,"LAKME Rose Loose Face Powder with Sunscreen For All Skin Types, Matte Finish, Soft Pink, 40 g & 9 to 5 CC Cream Mini, 01 - Beige, L 9 g",14,Beauty
+28,skin aqua,skin aqua.jpg,Beauty Products,300,330,Skin Aqua UV Super Moisture Gel is a waterproof and sweatproof sunscreen with chemical UV filters. It has a gel-type formula that is suitable for makeup applications.,15,Beauty
+29,tartellete,tartellete.jpg,Beauty Products,650,780,"This eyeshadow palette is ALL matte, so if you're a no shimmer type of gal and love neutrals - this may be the perfect one for you. It contains 12 stunning, diverse shades perfect for every day neutral looks plus deeper shades to create a stunning smokey eye!",16,Beauty
+30,volmatic,volmatic.jpg,Beauty Products,450,560,"The “tubular” formula coats your lashes from root to tip and binds to your lashes, wrapping each lash in its own tube. It's like lash extensions in a bottle. Removal is easy, use warm water on a cotton pad, hold over eye and tubes will gently slide off, or your daily cleanser will work just as well.",17,Beauty
+31,yardley,yardley.jpg,Beauty Products,600,780,"Enriched with various elements, Yardley's deodorant roll-ons provide 48-hour sweat protection, reduce signs of wrinkles as well as lighten the overall skin tone. They contain natural licorice extracts and leave no white residue on the skin. Moreover, the roll-ons are free from alcohol and colorants.",12,Beauty
+32,Brown Bed,brownbed.jpg,Furniture,4000,5000,"Wooden Double Bed- 4 x 6 x 1 Ft, Made of salla wood,Foldable, Used 18mm and 10 mm plyboard",16,Furwe
+33,White Bed,whitebed.jpg,Furniture,5000,6000,"European White Bed - 5 Ft *6.5 Ft,Material: Saj ,Sallo Plyboard and Formaika Glossy Shining,King Size Bed",17,Furwe
+34,Black Bed,blackbed.jpg,Furniture,6000,7000,"Black Color Double Size Bed ( 4ft X 6.1ft ), Made of 16mm plyboard,10mm plywood, Sallah wood used.",16,Furwe
+35,Deban Sofa,deban.jpg,Furniture,8000,10000,"Luxury Deban Sofa, high-quality cloths,wood 5 years warranty",17,Furwe
+36,Regjin Sofa,regjin.jpg,Furniture,12000,15000,"Regjin Double Bag Sofa Set, High-quality cloths, Luxury Kusan with a comfortable seat.",18,Furwe
+37,Brown Cupboard,browncupboard.jpg,Furniture,15000,16000,"3 Piece Daraz 6ft By 6ft, Attached With Mirrors, 3 Sets",19,Furwe
+38,Single Cupboard,singlecupboard.jpg,Furniture,8000,10000,"Single Mayaur Wardrobe 34X72X15, 2 sets, attached with mirrors",20,Furwe
+39,Dell inspiron,dell.jpg,Laptop,50000,60000,Dell Inspiron is a Windows 10 laptop with a 15.60-inch display that has a resolution of 1920x1080 pixels. It is powered by a APU Quad Core A6 processor and it comes with 8GB of RAM. The Dell Inspiron packs 1TB of HDD storage.,21,Variety
+40,light mouse,lightmouse.jpg,Electronics,1100,1200,Leishe Lighting Mouse Orginal High Quailty 7 Color Light Gaming Mouse - Black,22,Variety

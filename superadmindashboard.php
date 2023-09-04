@@ -45,7 +45,7 @@ $row = mysqli_fetch_array($record);
                 <div class="sidebar-brand-icon rotate-n-15">
                    
                 </div>
-                <div class="sidebar-brand-text mx-3">Super Admin<sup></sup></div>
+                <div class="sidebar-brand-text mx-3"> Admin<sup></sup></div>
             </a>
 <!-- Nav Item - Dashboard -->
             <!-- Nav Item - Dashboard -->
